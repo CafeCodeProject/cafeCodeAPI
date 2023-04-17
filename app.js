@@ -1,5 +1,6 @@
 const express = require('express');
-const mongooe = require('mongoose')
+require('dotenv').config();
+const mongoose = require('mongoose')
 let app = express();
 app.use(express.json());
 
