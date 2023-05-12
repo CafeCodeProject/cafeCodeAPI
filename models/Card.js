@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const RegisterSchema = new Schema({
-    registerCode: {
+const CardSchema = new Schema({
+    cardCode: {
         type: String,
         required: true,
         trim: true
@@ -15,7 +15,7 @@ const RegisterSchema = new Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Cafe'
     },
-    registerCreated: {
+    cardCreated: {
         type: Date,
         default: Date.now
     }
