@@ -7,7 +7,7 @@ const CardSchema = new Schema({
         required: true,
         trim: true
     },
-    UserId: {
+    userId: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
     },
@@ -20,3 +20,6 @@ const CardSchema = new Schema({
         default: Date.now
     }
 });
+
+const Card = mongoose.model('Card', CardSchema);
+module.exports = Card;

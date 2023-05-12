@@ -22,3 +22,6 @@ const CafeSchema = new Schema({
         default: Date.now
     }
 });
+
+const Coffe = mongoose.model('Coffe', CoffeSchema);
+module.exports = Coffe;
