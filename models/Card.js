@@ -9,11 +9,14 @@ const CardSchema = new Schema({
     },
     userId: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'User'
+        ref: 'User',
+        require:true
+        
     },
-    cafeId:{
+    coffeId:{
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Cafe'
+        ref: 'Coffe',
+        require:true
     },
     cardCreated: {
         type: Date,

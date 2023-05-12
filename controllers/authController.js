@@ -40,11 +40,12 @@ exports.loginUser = async (req, res) => {
             if (cmp) {
                 const token = jwt.sign({
                     userMail: user.userMail
-                }, secureKey, { expiresIn: '1h' })
+                }, process.env.SKey, { expiresIn: '1h' })
                 res.send({
                     "mesaj": "Auth Success",
                     "token": token,
                     "user": {
+                        "_id":user._id,
                         "userName": user.userName,
                         "userMail": user.userMail
                     }

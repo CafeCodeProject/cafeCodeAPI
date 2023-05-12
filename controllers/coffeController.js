@@ -1,4 +1,4 @@
-const Coffe = require('../models/User');
+const Coffe = require('../models/Coffe');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
@@ -18,7 +18,7 @@ exports.createCoffe = async (req, res) => {
             "baslik": "Başarılı!", "mesaj": 'Coffe başarıyla oluşturuldu!',
             "coffe": {
                 "coffeName": coffe.coffeName,
-                "coffeMail": coffe.userMail
+                "coffeMail": coffe.coffeMail
             }
         });
     } catch (error) {
