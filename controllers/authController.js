@@ -18,6 +18,7 @@ exports.createUser = async (req, res) => {
             "baslik": "Başarılı!", "mesaj": 'Kullanıcı başarıyla oluşturuldu!',
             "user": {
                 "userName": user.userName,
+                "userSurname":user.userSurname,
                 "userMail": user.userMail
             }
         });
